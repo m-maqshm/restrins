@@ -13,22 +13,14 @@ class Scan extends StatelessWidget {
             children: [
               Container(
                 height: 200,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(20),
-                      child: Text("Mega Deal",style: TextStyle(fontSize: 23,color: Colors.white),),
-                    ),
-                    // SizedBox(
-                    //     child: Image.asset(
-                    //       "assets/images/ss.jpeg",
-                    //       fit: BoxFit.fill,
-                    //     )),
-                  ],
-                ),
+                width: double.infinity,
+                child: Image.asset('assets/images/McDonalds-Inteligencia-Artificial.jpg',fit: BoxFit.fill,)
+
+
+                ,
               ),
               Container(
+                padding: EdgeInsets.only(left: 2,top: 6),
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height,
                 decoration: BoxDecoration(
@@ -43,6 +35,7 @@ class Scan extends StatelessWidget {
                       Expanded(flex: 1,child: Container(
 
                           decoration: BoxDecoration(
+                            // shape: BoxShape.circle,
                               borderRadius: BorderRadius.circular(20),
                               color: Colors.black
                           ),
@@ -120,7 +113,6 @@ class Scan extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("data",textAlign: TextAlign.start),
                           Row(children: [
                             Icon(Icons.star,color: Colors.amber,),
                             Text("99.9 + ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22,color: Colors.black),),
@@ -135,24 +127,20 @@ class Scan extends StatelessWidget {
                           ],),
                        SizedBox(height: 8,),
                        Container(
-                         width: 500,
-                         height: 70,
-                           // margin: EdgeInsets.all(15),
-                           padding: EdgeInsets.all(15),
+                         height: 50,
+                           padding: EdgeInsets.only(top: 15),
+                           width: double.infinity,
                            decoration: BoxDecoration(
                              borderRadius: BorderRadius.circular(40),
                              color: Colors.amber
                            ),
-                           child: Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceAround,
-                             crossAxisAlignment: CrossAxisAlignment.center,
-                             children: [
-                               Text("Oficer",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.white)),
-                               Text("Oficer",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.white)),
-                               Text("Oficer",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.white)),
-                               Text("Oficer",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.white)),
-                             ],
-                           )),
+                           child: ListView.builder(
+
+                             scrollDirection: Axis.horizontal,
+                             itemCount: 6,
+                             itemBuilder: (context, index) {
+                               return  Container(margin: EdgeInsets.only(left: 7) ,child: Text("Oficer",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.white)));
+                             },)),
                         ],
                       )),
                   Expanded(

@@ -8,7 +8,7 @@ class homeScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.red,
+          color: Colors.deepOrangeAccent,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -19,13 +19,18 @@ class homeScreen extends StatelessWidget {
                   children: [
                     Container(
                       margin: EdgeInsets.all(20),
-                      child: Text("Mega Deal",style: TextStyle(fontSize: 23,color: Colors.white),),
+                      child: Text("Mega Deal",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),),
                     ),
                     SizedBox(
-                        child: Image.asset(
-                      "assets/images/ss.jpeg",
-                      fit: BoxFit.fill,
-                    )),
+                        child: Stack(
+                          children: [
+                            Positioned(child: Image.asset(
+                              "assets/images/pizza.png",
+                              fit: BoxFit.fill,
+                            ),)
+
+                          ],
+                        )),
                   ],
                 ),
               ),
@@ -49,12 +54,14 @@ class homeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
+
                           children: [
-                            Icon(Icons.info_outline),
+                            Icon(Icons.info_outline,color: Colors.white,),
+                            SizedBox(width: 1,),
                             Text(
                               ("Compaign info"),
                               style: TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white),
                             ),
