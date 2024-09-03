@@ -203,28 +203,18 @@ class Scan extends StatelessWidget {
                                           SizedBox(
                                             height: 2,
                                           ),
-                                          Text("\$ 5.55",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 19),),
+                                          Text(
+                                            "\$ 5.55",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.black,
+                                                fontSize: 19),
+                                          ),
                                         ],
                                       ),
                                     ),
                                   ),
                                 )
-
-/*                                ListTile(
-                                  title: Text("ss"),
-                                  leading: Container(
-
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Colors.black
-                                    ),
-                                    width: 100,
-                                    // height: ,
-                                    child: SizedBox(
-                                        height: 90,
-                                        child: Image.asset('assets/images/images.jpeg',fit: BoxFit.cover,)),
-                                  ),
-                                )*/
                               ],
                             ),
                           ),
