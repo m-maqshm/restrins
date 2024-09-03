@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foude/homeScri.dart';
 import 'package:foude/scanpage.dart';
+import 'package:foude/thardPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scan(),
+      home: thardpage(),
 
     );}}
